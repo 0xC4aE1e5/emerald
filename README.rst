@@ -1,3 +1,3 @@
-`blang'
+'blang'
 =====
-This is `blang'. A fast programming language.
+This is 'blang'. A fast programming language.
