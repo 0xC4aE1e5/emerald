@@ -1,5 +1,3 @@
-filename = ARGV[0]
-code = File.read(filename)
 def readprog(codet, varlist)
     lines = codet.split("\n")
     lines.each do |line|
@@ -15,7 +13,8 @@ def readprog(codet, varlist)
         elsif tok[0] == "div"
             puts tok[1].to_f / tok[2].to_f
         elsif tok[0] == "inp"
-            puts tok[1..-1].join(" ")
+            print tok[1..-1].join(" ")
+            print " "
             varlist["inp"] = gets.to_s
         elsif tok[0] == "if"
             if tok[2] == "is"
@@ -44,4 +43,15 @@ def readprog(codet, varlist)
     end
 end
 vars = {"null" => ""}
-readprog(code, vars)
+begin
+    filename = ARGV[0]
+    code = File.read(filename)
+    readprog(code, vars)
+rescue
+    puts "blang REPL"
+    while true
+        print "=> "
+        code = gets.to_s
+        readprog(code, vars)
+    end
+end
