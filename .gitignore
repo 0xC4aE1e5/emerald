@@ -1,3 +1,5 @@
 blang
 *.tar.zst
 pkg/
+src/
+blang/
