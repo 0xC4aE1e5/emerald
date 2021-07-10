@@ -1,1 +1,3 @@
 blang
+*.tar.zst
+pkg/
