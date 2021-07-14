@@ -1,4 +1,5 @@
 def readprog(codet, varlist)
+    codet = codet.gsub(";", "\n")
     lines = codet.split("\n")
     lines.each do |line|
     tok = line.split(" ")
