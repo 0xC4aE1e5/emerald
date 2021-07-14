@@ -1,7 +1,9 @@
 def readprog(codet, varlist)
-    codet = codet.gsub(";", "\n")
     lines = codet.split("\n")
     lines.each do |line|
+    if line.include? "var"
+		line = line.gsub(";", "\n")
+    end
     tok = line.split(" ")
     if tok[0] == "say"
         puts tok[1..-1].join(" ")
