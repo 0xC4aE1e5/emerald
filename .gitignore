@@ -1,5 +1,5 @@
-blang
+emerald
 *.tar.zst
 pkg/
 src/
-blang/
+emerald/
