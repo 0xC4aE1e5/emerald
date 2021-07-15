@@ -1,13 +1,13 @@
-all: blang
+all: emerald
 
-blang:
+emerald:
 	crystal build main.cr
-	mv main blang
+	mv main emerald
 
-install: blang
-	cp blang /usr/local/bin
+install: emerald
+	cp emerald /usr/local/bin
 
 uninstall:
-	rm -f /usr/local/bin/blang
+	rm -f /usr/local/bin/emerald
 
 update: uninstall install

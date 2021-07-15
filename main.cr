@@ -51,7 +51,7 @@ begin
     code = File.read(filename)
     readprog(code, vars)
 rescue
-    puts "blang REPL"
+    puts "Emerald REPL"
     while true
         print "=> "
         code = gets.to_s
