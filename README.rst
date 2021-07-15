@@ -1,3 +1,3 @@
-``blang``
+Emerald
 =====
-This is ``blang``. A fast programming language.
+This is Emerald. A fast programming language.
