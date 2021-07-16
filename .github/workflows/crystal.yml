@@ -11,14 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    container:
-      image: crystallang/crystal
-
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
       run: |
-        sudo apt install python-is-python3
+        whoami
+        # sudo apt install python-is-python3
         make
         ./emerald test.em
         cd py2em1
