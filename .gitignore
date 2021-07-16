@@ -1,5 +1,8 @@
 emerald
+py2em
 *.tar.zst
 pkg/
 src/
 emerald/
+py2em1/py2em
+py2em1/test.em
