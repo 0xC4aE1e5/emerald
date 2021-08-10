@@ -1,4 +1,4 @@
-name: Emerald CI
+name: Linux
 
 on:
   push:
