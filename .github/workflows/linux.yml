@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run tests
+    - name: Test Emerald
       run: |
         apt update && apt install sudo curl -y
         curl -fsSL https://crystal-lang.org/install.sh | sudo bash
