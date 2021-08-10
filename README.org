@@ -1,0 +1,25 @@
+* Emerald
+This is Emerald. A fast programming language.
+** Installing
+*** Windows
+Emerald is written in Crystal, but Ruby will be used for obvious reasons.
+1. Install Ruby using [[//rubyinstaller.org][RubyInstaller]].
+2. Run =pfw.rb=
+3. Run =windows.rb=
+4. Test it out by typing:
+#+BEGIN_SRC
+say Hello, Emerald!
+#+END_SRC
+Note that the extra tools won't be installed.
+*** Linux
+Just build it from source:
+#+BEGIN_SRC bash
+make
+sudo make install
+#+END_SRC
+Note that it will install the extra tools. If you don't want those, run this:
+#+BEGIN_SRC bash
+make emerald
+cp emerald /usr/local/bin
+#+END_SRC
+No =.configure=.
