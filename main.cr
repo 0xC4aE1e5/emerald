@@ -4,6 +4,7 @@ def readprog(codet, varlist)
     if line.includes? "var"
 		line = line.gsub(";", "\n")
     end
+    line = line.gsub("\r", "")
     tok = line.split(" ")
     if tok[0] == "say"
         puts tok[1..-1].join(" ")
