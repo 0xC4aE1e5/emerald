@@ -20,6 +20,6 @@ sudo make install
 Note that it will install the extra tools. If you don't want those, run this:
 #+BEGIN_SRC bash
 make emerald
-cp emerald /usr/local/bin
+sudo cp emerald /usr/local/bin
 #+END_SRC
 No =.configure=.
