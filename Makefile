@@ -16,5 +16,9 @@ install: all
 
 uninstall:
 	rm -f /usr/local/bin/emerald
+	rm -f /usr/local/bin/py2em || true
+	rm -f /usr/local/bin/em2elf || true
+	
+	
 
 update: uninstall install
