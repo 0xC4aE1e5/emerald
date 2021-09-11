@@ -1,52 +1,66 @@
 def readprog(codet, varlist)
     lines = codet.split("\n")
     lines.each do |line|
-    if line.includes? "var"
-		line = line.gsub(";", "\n")
-    end
     line = line.gsub("\r", "")
     tok = line.split(" ")
-    if tok[0] == "say"
+    if tok[0] == "print"
         puts tok[1..-1].join(" ")
         elsif tok[0] == "add"
-            puts tok[1].to_f + tok[2].to_f
-        elsif tok[0] == "stt"
-            puts tok[1].to_f - tok[2].to_f
-        elsif tok[0] == "mpy"
-            puts tok[1].to_f * tok[2].to_f
-        elsif tok[0] == "div"
-            puts tok[1].to_f / tok[2].to_f
-        elsif tok[0] == "inp"
+            varlist["add"] = "#{tok[1].to_f + tok[2].to_f}"
+        elsif tok[0] == "subtract"
+            varlist["subtract"] = "#{tok[1].to_f - tok[2].to_f}"
+        elsif tok[0] == "multiply"
+            varlist["multiply"] = "#{tok[1].to_f * tok[2].to_f}"
+        elsif tok[0] == "divide"
+            varlist["divide"] = "#{tok[1].to_f / tok[2].to_f}"
+        elsif tok[0] == "input"
             print tok[1..-1].join(" ")
             print " "
-            varlist["inp"] = gets.to_s
+            varlist["input"] = gets.to_s
         elsif tok[0] == "if"
-            if tok[2] == "is"
-                if tok[1] == tok[3]
-                    readprog(tok[4..-1].join(" "), varlist)
+            code = tok[4..-1].join(" ").gsub(";", "\n").split(" else ")
+            if code.size == 1
+                if tok[2] == "is"
+                    if tok[1] == tok[3]
+                        readprog(code[0], varlist)
+                    end
+                elsif tok[2] == "not"
+                    if tok[1] != tok[3]
+                        readprog(code[0], varlist)
+                    end
                 end
-            elsif tok[2] == "not"
-                if tok[1] != tok[3]
-                    readprog(tok[4..-1].join(" "), varlist)
+            else
+                if tok[2] == "is"
+                    if tok[1] == tok[3]
+                        readprog(code[0], varlist)
+                    else
+                        readprog(code[1], varlist)
+                    end
+                elsif tok[2] == "not"
+                    if tok[1] != tok[3]
+                        readprog(code[0], varlist)
+                    else
+                        readprog(code[1], varlist)
+                    end
                 end
             end
-        elsif tok[0] == "lop"
+        elsif tok[0] == "loop"
             while true
-                readprog(tok[1..-1].join(" "), varlist)
+                readprog(tok[1..-1].join(" ").gsub(";", "\n"), varlist)
             end
-        elsif tok[0] == "var"
-            varlist[tok[1]] = tok[2..-1].join(" ")
-        elsif tok[0] == "uvr"
+        elsif tok[0] == "variable"
+            varlist[tok[1]] = tok[2..-1].join(" ").gsub(";", "\n")
+        elsif tok[0] == "usevariable"
             var = varlist[tok[1]]
             fixedcode1 = tok[2..-1].join(" ")
-            fixedcode = fixedcode1.sub("@", var)
+            fixedcode = fixedcode1.gsub("@", var)
             readprog(fixedcode, varlist)
-        elsif tok[0] == "scl"
+        elsif tok[0] == "system"
             system tok[1..-1].join(" ")
         end
     end
 end
-vars = {"null" => ""}
+vars = {"junk" => ""}
 begin
     filename = ARGV[0]
     code = File.read(filename)

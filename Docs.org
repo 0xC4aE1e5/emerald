@@ -1,0 +1,20 @@
+* Documentation
+** The Documentation is incomplete.
+Emerald is a small programming language that is designed to be easy to learn and use.
+It's set of functions is growing very fast and it's a work in progress.
+But it's also a very good language to learn and use.
+** The Hello World program
+The first program you should write is the Hello World program. It's a very simple program that prints the text "Hello World" on the screen.
+To first use it, you need to install the Emerald interpreter.
+Usually, you just need to run =pfw.rb= and then type =ruby windows.rb= if you're on Windows and have Ruby installed. This patches Emerald to work with the Ruby language and not Crystal.
+If you're on Linux, you just have to type =make emerald= if you have the Crystal compiler installed.
+Then, run Emerald by typing =ruby windows.rb= if you're on Windows and =./emerald= on Linux. You should see something like this:
+#+BEGIN_SRC
+Emerald REPL
+=>
+#+END_SRC
+What you need to do is press Ctrl+C. Now create a file called =hworld.em= and write the following code:
+#+BEGIN_SRC emerald
+print Hello World
+#+END_SRC
+Then, in the command to run, run the command, but append =hworld.em= to the end of the command. You should see =Hello World=.
