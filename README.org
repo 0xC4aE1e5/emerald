@@ -8,7 +8,7 @@ Emerald is written in Crystal, but Ruby will be used for obvious reasons.
 3. Run =windows.rb=
 4. Test it out by typing:
 #+BEGIN_SRC
-say Hello, Emerald!
+print Hello, Emerald!
 #+END_SRC
 Note that the extra tools won't be installed.
 *** Linux
