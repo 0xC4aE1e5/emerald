@@ -1,5 +1,4 @@
 * Documentation
-** The Documentation is incomplete.
 Emerald is a small programming language that is designed to be easy to learn and use.
 It's set of functions is growing very fast and it's a work in progress.
 But it's also a very good language to learn and use.
@@ -55,3 +54,58 @@ input What's your name?
 usevariable input print Howdy, @
 #+END_SRC
 Note that functions that are supposed to return things, actually create a variable. This is normal.
+** If statements
+One of the trickiest things in programming, are if statements. In Emerald, =if= is easy. Here are some examples:
+#+BEGIN_SRC emerald
+ Does not output anything
+if Howdy is Hello print Something's wrong... 
+ Says it's incorrect
+if Howdy is Hello print Something's wrong... else print Yup. That's incorrect.
+ Says something's wrong
+if Howdy not Hello print Something's wrong... else print Yup. That's incorrect.
+#+END_SRC
+Here are some templates:
+
+If statement, is, w/o else:
+#+BEGIN_SRC emerald
+if <Candidate 1> is <Candidate 2> <Code to run>
+#+END_SRC
+If statement, not, w/o else:
+#+BEGIN_SRC emerald
+if <Candidate 1> not <Candidate 2> <Code to run>
+#+END_SRC
+If statement, is, with else:
+#+BEGIN_SRC emerald
+if <Candidate 1> is <Candidate 2> <Code to run> else <Code to run for else>
+#+END_SRC
+If statement, not, with else:
+#+BEGIN_SRC emerald
+if <Candidate 1> not <Candidate 2> <Code to run> else <Code to run for else>
+#+END_SRC
+** Infinite loops
+Some programs might need infinite loops. They use them to say, hang for a hosted runner to not stop. Again, the syntax is really simple:
+#+BEGIN_SRC emerald
+loop <The code you want to loop>
+#+END_SRC
+Here's an example that prints =Emerald= forever:
+#+BEGIN_SRC emerald
+loop print Emerald
+#+END_SRC
+** Variables
+*** =variable=
+The syntax for =variable= is simple. Here's an example of using it:
+#+BEGIN_SRC emerald
+variable x No adult stuff please.
+#+END_SRC
+*** =usevariable=
+Again, the syntax for =usevariable= is simple. Note that you use an =@= in place of the variable's contents. Here's how you use it:
+#+BEGIN_SRC emerald
+variable a HTML Anchor Tag?
+usevariable a What is a @
+#+END_SRC
+** System calls
+Running system calls is very straight forward, and has the same syntax as Ruby. Here's how you use it:
+#+BEGIN_SRC emerald
+system echo I'm outside Emerald...
+#+END_SRC
+* You did it!
