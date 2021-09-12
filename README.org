@@ -23,3 +23,5 @@ make emerald
 sudo cp emerald /usr/local/bin
 #+END_SRC
 No =.configure=.
+** I want to learn more!
+Visit [[Docs.org][this link]].
