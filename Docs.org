@@ -17,4 +17,41 @@ What you need to do is press Ctrl+C. Now create a file called =hworld.em= and wr
 #+BEGIN_SRC emerald
 print Hello World
 #+END_SRC
-Then, in the command to run, run the command, but append =hworld.em= to the end of the command. You should see =Hello World=.
+Then, in the command to run, run the command, but append =hworld.em= to the end of the command. You should see =Hello World=. You can swap =Hello World= with something else.
+** Adding numbers
+To add numbers, you use the add function. To do that, run this code to add 5+2:
+#+BEGIN_SRC emerald
+add 5 2
+#+END_SRC
+Notice that it didn't output anything. To output the result, run this:
+#+BEGIN_SRC emerald
+add 5 2
+usevariable add print @
+#+END_SRC
+Essentially, it's saying to the computer:
+
+#+BEGIN_QUOTE
+Add 5+2, and store that into a variable called =add=.
+
+Now, get =add='s contents and print it out.
+#+END_QUOTE
+
+We will talk more about =usevariable=.
+** Subtracting/Multiplying/Dividing
+The syntax is exactly the same as =add=, but use the correct operator. Here is a little chart:
+
+=subtract= for subtracting
+
+=multiply= for multiplying
+
+=divide= for dividing
+
+Also, the variable name to use is the exact same as the operator.
+** User input
+One thing about interactive CLI programs is that they use input functions. Be it a Python app, Java app, or even an Emerald app.
+The syntax for the input function is actually the same as Python's. Here is an example of =input=:
+#+BEGIN_SRC emerald
+input What's your name?
+usevariable input print Howdy, @
+#+END_SRC
+Note that functions that are supposed to return things, actually create a variable. This is normal.
