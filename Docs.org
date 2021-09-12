@@ -103,6 +103,13 @@ Again, the syntax for =usevariable= is simple. Note that you use an =@= in place
 variable a HTML Anchor Tag?
 usevariable a What is a @
 #+END_SRC
+*** Functions
+To create functions, you do it like this:
+#+BEGIN_SRC
+variable print_hworld_on_sep_lines print Hello;print World
+usevariable print_hworld_on_sep_lines @
+#+END_SRC
+You don't have to have a semi-colon; it's only for functions with multiple lines.
 ** System calls
 Running system calls is very straight forward, and has the same syntax as Ruby. Here's how you use it:
 #+BEGIN_SRC emerald
