@@ -101,7 +101,7 @@ variable x No adult stuff please.
 Again, the syntax for =usevariable= is simple. Note that you use an =@= in place of the variable's contents. Here's how you use it:
 #+BEGIN_SRC emerald
 variable a HTML Anchor Tag?
-usevariable a What is a @
+usevariable a print What is a @
 #+END_SRC
 *** Functions
 To create functions, you do it like this:
