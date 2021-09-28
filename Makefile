@@ -11,4 +11,5 @@ install: all
 	cp empkg /usr/local/bin
 uninstall:
 	rm -f /usr/local/bin/emerald
+	rm -f /usr/local/bin/empkg || true
 update: uninstall install
