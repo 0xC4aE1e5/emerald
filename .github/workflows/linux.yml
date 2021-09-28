@@ -15,9 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Test Emerald
       run: |
-        apt update && apt install sudo curl -y
-        curl -fsSL https://crystal-lang.org/install.sh | sudo bash
-        sudo apt install python-is-python3
+        apt update && apt install ruby -y
         make
         ./emerald test.em
         cd py2em1
