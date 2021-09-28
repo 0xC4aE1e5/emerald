@@ -18,6 +18,3 @@ jobs:
         apt update && apt install ruby -y
         make
         ./emerald test.em
-        cd py2em1
-        ../py2em test.py > test.em
-        ../emerald test.em
