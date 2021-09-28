@@ -1,5 +1,7 @@
 * Emerald
 This is Emerald. A fast programming language.
+** Modules
+Go to [[//github.com/emerald-pl/emerald-mods][emerald-mods]] to see a list.
 ** Installing
 *** Windows
 Emerald is written in Ruby, so you need Ruby.
