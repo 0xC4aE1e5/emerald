@@ -5,9 +5,7 @@ But it's also a very good language to learn and use.
 ** The Hello World program
 The first program you should write is the Hello World program. It's a very simple program that prints the text "Hello World" on the screen.
 To first use it, you need to install the Emerald interpreter.
-Usually, you just need to run =pfw.rb= and then type =ruby windows.rb= if you're on Windows and have Ruby installed. This patches Emerald to work with the Ruby language and not Crystal.
-If you're on Linux, you just have to type =make emerald= if you have the Crystal compiler installed.
-Then, run Emerald by typing =ruby windows.rb= if you're on Windows and =./emerald= on Linux. You should see something like this:
+Usually, you just need to run =ruby main.rb= if you have Ruby.
 #+BEGIN_SRC
 Emerald REPL
 =>
@@ -115,4 +113,11 @@ Running system calls is very straight forward, and has the same syntax as Ruby. 
 #+BEGIN_SRC emerald
 system echo I'm outside Emerald...
 #+END_SRC
+** Modules
+Modules are also straight forward. You see the theme, right?
+To import a module, run this snippet:
+#+BEGIN_SRC emerald
+require <The name of the module>
+#+END_SRC
+You install modules by using =empkg=. To do that, run the command =ruby empkg.rb <Module name>=
 * You did it!

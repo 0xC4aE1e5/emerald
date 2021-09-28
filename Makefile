@@ -1,24 +1,14 @@
-all: emerald py2em em2elf
+all: emerald empkg
 
 emerald:
-	crystal build main.cr -o emerald
-
-py2em:
-	crystal build py2em1/py2em.cr -o py2em
-
-em2elf:
-	crystal build em2elf1/em2elf.cr -o em2elf
-
+	(echo '#!/usr/bin/env ruby' && cat main.rb) > emerald
+	chmod +x emerald
+empkg:
+	(echo '#!/usr/bin/env ruby' && cat empkg.rb) > empkg
+	chmod +x empkg
 install: all
 	cp emerald /usr/local/bin
-	cp py2em /usr/local/bin
-	cp em2elf /usr/local/bin
-
+	cp empkg /usr/local/bin
 uninstall:
 	rm -f /usr/local/bin/emerald
-	rm -f /usr/local/bin/py2em || true
-	rm -f /usr/local/bin/em2elf || true
-	
-	
-
 update: uninstall install

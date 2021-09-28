@@ -19,7 +19,7 @@ def readprog(codet, varlist)
             varlist["input"] = gets.to_s
         elsif tok[0] == "if"
             code = tok[4..-1].join(" ").gsub(";", "\n").split(" else ")
-            if code.size == 1
+            if code.length() == 1
                 if tok[2] == "is"
                     if tok[1] == tok[3]
                         readprog(code[0], varlist)
@@ -57,6 +57,11 @@ def readprog(codet, varlist)
             readprog(fixedcode, varlist)
         elsif tok[0] == "system"
             system tok[1..-1].join(" ")
+        elsif tok[0] == "rubycode"
+            eval tok[1..-1].join(" ")
+        elsif tok[0] == "require"
+            mod = File.read("#{tok[1]}.em")
+            readprog(mod, varlist)
         end
     end
 end
