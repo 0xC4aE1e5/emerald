@@ -6,7 +6,7 @@ Go to [[//github.com/emerald-pl/emerald-mods][emerald-mods]] to see a list.
 *** Windows
 Emerald is written in Ruby, so you need Ruby.
 1. Install Ruby using [[//rubyinstaller.org][RubyInstaller]].
-2. Run =windows.rb=
+2. Run =main.rb=
 3. Test it out by typing:
 #+BEGIN_SRC
 print Hello, Emerald!
