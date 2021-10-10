@@ -104,8 +104,9 @@ usevariable a print What is a @
 *** Functions
 To create functions, you do it like this:
 #+BEGIN_SRC
-variable print_hworld_on_sep_lines print Hello;print World
-usevariable print_hworld_on_sep_lines @
+function print_hworld_on_sep_lines print Hello;print World
+ Run the function
+call print_hworld_on_sep_lines
 #+END_SRC
 You don't have to have a semi-colon; it's only for functions with multiple lines.
 ** System calls

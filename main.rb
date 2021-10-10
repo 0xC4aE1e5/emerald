@@ -62,6 +62,10 @@ def readprog(codet, varlist)
         elsif tok[0] == "require"
             mod = File.read("#{tok[1]}.em")
             readprog(mod, varlist)
+        elsif tok[0] == "function"
+            varlist[tok[1]] = tok[2..-1].join(" ").gsub(";", "\n")
+        elsif tok[0] == "call"
+            readprog(varlist[tok[1]], varlist)
         end
     end
 end
