@@ -28,6 +28,8 @@ jobs:
         echo This runs every Saturday.
     - name: Create Snapshot
       run: |
+        git config --global user.email "github@github.com"
+        git config --global user.name "snapshot-maker"
         git clone https://github.com/emerald-pl/emerald.git
         cd emerald
         git tag -a s$(date +%s) -m "Saturday Snapshot Build"
