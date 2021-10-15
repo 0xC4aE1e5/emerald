@@ -25,5 +25,5 @@ jobs:
     - name: Create Snapshot
       run: |
         git tag -a s$(date +%s) -m "Saturday Snapshot Build"
-        git commit
+        git commit -m "Build Snapshot using Bot"
         git push
