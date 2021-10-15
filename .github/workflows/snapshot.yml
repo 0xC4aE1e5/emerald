@@ -26,6 +26,7 @@ jobs:
       run: | 
         echo Snapshot building...
         echo This runs every Saturday.
+        ls
     - name: Create Snapshot
       run: |
         git tag -a s$(date +%s) -m "Saturday Snapshot Build"
