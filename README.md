@@ -2,18 +2,13 @@
 
 This is Emerald. A fast programming language.
 
-## Modules
-
-Go to [emerald-mods](file:////github.com/emerald-pl/emerald-mods) to see
-a list.
-
 ## Installing
 
 ### Windows
 
 Emerald is written in Ruby, so you need Ruby.
 
-1.  Install Ruby using [RubyInstaller](file:////rubyinstaller.org).
+1.  Install Ruby using [RubyInstaller](//rubyinstaller.org).
 2.  Run `main.rb`
 3.  Test it out by typing:
 
