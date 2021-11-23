@@ -35,4 +35,4 @@ No `.configure`.
 
 ## I want to learn more!
 
-Visit <a href="Docs.md">*this link*</a>.
+Visit <a href="https://allcode.brahmasharma.repl.co/root/emerald/blob/master/Docs.md">*this link*</a>.
