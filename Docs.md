@@ -150,5 +150,13 @@ Modules are also straight forward. You see the theme, right? To import a
 module, run this snippet:
 
     require <The name of the module>
+They can also be Ruby extensions, which in-turn can be used to create C extensions. Ruby extensions are used like this:
+```
+rubyext some_extension.rb a_function arg1 arg2 arg3
+```
+Ruby extensions also use `args`. So, `args[0]` would be `a_function`. Built-in functions use `tok`.
+
+Ruby extensions are much preferred, because they support variable-less arguments, meaning you don't need to create a bunch of variables as arguments. 
 
 # You did it!
+

@@ -3,6 +3,10 @@ def readprog(codet, varlist)
     lines.each do |line|
         line = line.gsub("\r", "")
         tok = line.split(" ")
+        <<-DOC
+        tok vs args.
+        args is for Ruby extensions, and tok is for built-in functions
+        DOC
         if tok[0] == "print"
             puts tok[1..-1].join(" ")
             elsif tok[0] == "add"
@@ -82,6 +86,11 @@ def readprog(codet, varlist)
                 varlist["read"] = File.read(tok[1])
             elsif tok[0] == "range"
                 varlist["range"] = ("0"..tok[1]).to_a
+            elsif tok[0] == "rubyext"
+                args = tok[2..]
+                eval File.read(tok[1]) 
+            elsif tok[0].start_with?("#")
+                0
             else
                 puts tok.join(" ")
             end
