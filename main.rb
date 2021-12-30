@@ -3,10 +3,8 @@ def readprog(codet, varlist)
     lines.each do |line|
         line = line.gsub("\r", "")
         tok = line.split(" ")
-        <<-DOC
-        tok vs args.
-        args is for Ruby extensions, and tok is for built-in functions
-        DOC
+        # tok vs args.
+        # args is for Ruby extensions, and tok is for built-in functions
         if tok[0] == "print"
             puts tok[1..-1].join(" ")
             elsif tok[0] == "add"
