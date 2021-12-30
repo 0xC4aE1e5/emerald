@@ -8,18 +8,13 @@ This is Emerald. A fast programming language.
 
 Emerald is written in Ruby, so you need Ruby.
 
-1.  Install Ruby using [RubyInstaller](//rubyinstaller.org).
-2.  Run `main.rb`
-3.  Test it out by typing:
-
-<!-- -->
-
-    print Hello, Emerald!
+1. Run `install.sh`
 
 Note that the extra tools won't be installed.
 
 ### Linux
 
+Note: You will need `mruby` instead. This helps with the run time.
 Just build it from source:
 
     make
