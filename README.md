@@ -8,7 +8,7 @@ This is Emerald. A fast programming language.
 
 Emerald is written in Ruby, so you need Ruby.
 
-1. Run `install.sh`
+Run `install.ps1`
 
 Note that the extra tools won't be installed.
 
