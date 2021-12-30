@@ -16,6 +16,7 @@ Note that the extra tools won't be installed.
 ### Linux
 
 Note: You will need `mruby` instead. This helps with the run time.
+
 Just build it from source:
 
     make
