@@ -5,7 +5,6 @@ emerald:
 	chmod +x emerald
 install: all
 	cp emerald /usr/local/bin
-	cp empkg /usr/local/bin
 uninstall:
 	rm -f /usr/local/bin/emerald
 	rm -f /usr/local/bin/empkg || true
