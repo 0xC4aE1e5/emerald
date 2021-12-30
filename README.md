@@ -6,7 +6,7 @@ This is Emerald. A fast programming language.
 
 ### Windows
 
-Emerald is written in Ruby, so you need Ruby.
+Emerald is written in Ruby, but the installer installs Ruby for you.
 
 1. Run `install.ps1`
 2. Run `emerald` in CMD
