@@ -1,4 +1,4 @@
-all: emerald empkg
+all: emerald
 
 emerald:
 	(echo '#!/usr/bin/env ruby' && cat main.rb) > emerald
