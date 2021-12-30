@@ -87,7 +87,7 @@ def readprog(codet, varlist)
             elsif tok[0] == "range"
                 varlist["range"] = ("0"..tok[1]).to_a
             elsif tok[0] == "rubyext"
-                args = tok[2..]
+                args = tok[2..-1]
                 eval File.read(tok[1]) 
             elsif tok[0].start_with?("#")
                 0
