@@ -15,8 +15,6 @@ Note that the extra tools won't be installed.
 
 ### Linux
 
-Note: You will need `mruby` instead. This helps with the run time.
-
 Just build it from source:
 
     make
@@ -32,4 +30,4 @@ No `.configure`.
 
 ## I want to learn more!
 
-Visit <a href="https://allcode.brahmasharma.repl.co/root/emerald/blob/master/Docs.md">*this link*</a>.
+Visit <a href="https://allcode.brahmasharma.repl.co/root/emerald/blob/master/Docs.md">_this link_</a>.

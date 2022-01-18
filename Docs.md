@@ -4,6 +4,10 @@ Emerald is a small programming language that is designed to be easy to
 learn and use. It's set of functions is growing very fast and it's a
 work in progress. But it's also a very good language to learn and use.
 
+## Comments
+
+Just prefix them with a `#` like in Python or Ruby.
+
 ## The Hello World program
 
 The first program you should write is the Hello World program. It's a
@@ -74,11 +78,11 @@ a variable. This is normal.
 One of the trickiest things in programming, are if statements. In
 Emerald, `if` is easy. Here are some examples:
 
-     Does not output anything
-    if Howdy is Hello print Something's wrong... 
-     Says it's incorrect
+    # Does not output anything
+    if Howdy is Hello print Something's wrong...
+    # Says it's incorrect
     if Howdy is Hello print Something's wrong... else print Yup. That's incorrect.
-     Says something's wrong
+    # Says something's wrong
     if Howdy not Hello print Something's wrong... else print Yup. That's incorrect.
 
 Here are some templates:
@@ -131,7 +135,7 @@ in place of the variable's contents. Here's how you use it:
 To create functions, you do it like this:
 
     function print_hworld_on_sep_lines print Hello;print World
-     Run the function
+    # Run the function
     call print_hworld_on_sep_lines
 
 You don't have to have a semi-colon; it's only for functions with
@@ -150,13 +154,23 @@ Modules are also straight forward. You see the theme, right? To import a
 module, run this snippet:
 
     require <The name of the module>
+
 They can also be Ruby extensions, which in-turn can be used to create C extensions. Ruby extensions are used like this:
+
 ```
 rubyext some_extension.rb a_function arg1 arg2 arg3
 ```
+
 Ruby extensions also use `args`. So, `args[0]` would be `a_function`. Built-in functions use `tok`.
 
-Ruby extensions are much preferred, because they support variable-less arguments, meaning you don't need to create a bunch of variables as arguments. 
+Ruby extensions are much preferred, because they support variable-less arguments, meaning you don't need to create a bunch of variables as arguments.
+
+### Installing Modules
+
+In the REPL or in a script, you can do this:
+
+```
+pkginstall <the package name>
+```
 
 # You did it!
-

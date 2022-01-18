@@ -1,7 +1,7 @@
 all: emerald
 
 emerald:
-	(echo '#!/usr/bin/env mruby' && cat main.rb) > emerald
+	(echo '#!/usr/bin/env ruby' && cat main.rb) > emerald
 	chmod +x emerald
 	
 install: all

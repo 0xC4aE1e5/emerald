@@ -1,3 +1,5 @@
+require 'open-uri'
+
 def readprog(codet, varlist)
     lines = codet.split("\n")
     lines.each do |line|
@@ -87,10 +89,28 @@ def readprog(codet, varlist)
             elsif tok[0] == "rubyext"
                 args = tok[2..-1]
                 eval File.read(tok[1]) 
+            elsif tok[0] == "pkginstall"
+                def downloadFile(url)
+                    URI.open(url) { |f| return f.read }
+                end
+                print "Saving package..."
+                # create a slash spinner
+                spinner = Thread.new {
+                while true
+                    print "."
+                    sleep 0.05
+                end
+                }
+                begin
+                    File.write "#{tok[1]}.em", downloadFile("https://codeberg.org/brahma/emerald-libs-exts/raw/branch/main/#{tok[1]}.em")
+                rescue => exception
+                    File.write "#{tok[1]}.rb", downloadFile("https://codeberg.org/brahma/emerald-libs-exts/raw/branch/main/#{tok[1]}.rb")
+                end
+                spinner.kill
+                print "\b "
+                puts "Done!"
             elsif tok[0].start_with?("#")
                 0
-            else
-                puts tok.join(" ")
             end
         end
     end
