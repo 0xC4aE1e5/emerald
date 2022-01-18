@@ -165,6 +165,8 @@ Ruby extensions also use `args`. So, `args[0]` would be `a_function`. Built-in f
 
 Ruby extensions are much preferred, because they support variable-less arguments, meaning you don't need to create a bunch of variables as arguments.
 
+In Ruby extensions, variables can be referenced like `varlist["variable_name"]`.
+
 ### Installing Modules
 
 In the REPL or in a script, you can do this:
