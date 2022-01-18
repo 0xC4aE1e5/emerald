@@ -1,4 +1,4 @@
-# 🟢 Emerald 🟢
+# 🟢 Emerald 🟢 [modules](https://codeberg.org/brahma/emerald-libs-exts)
 
 This is Emerald. A fast programming language.
 
