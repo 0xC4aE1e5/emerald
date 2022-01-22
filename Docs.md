@@ -68,7 +68,7 @@ syntax for the input function is actually the same as Python's. Here is
 an example of `input`:
 
     input: What's your name?
-    usevariable input print Howdy, {}
+    usevariable: input print Howdy, {}
 
 Note that functions that are supposed to return things, actually create
 a variable. This is normal.
@@ -119,7 +119,7 @@ a CI to not stop. Again, the syntax is really simple:
 
 Here's an example that prints `Emerald` forever:
 
-    loop: print Emerald
+    loop: print: Emerald
 
 ## Variables
 
@@ -150,7 +150,7 @@ rubycode: varlist["MyCoolList"] = ["yeah, you can have spaces here", "print: hel
 Here's how it works:
 
 ```
-list animals Pigs Cows Sheep Chickens
+list: animals Pigs Cows Sheep Chickens
 ```
 
 #### For loop
