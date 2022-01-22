@@ -32,6 +32,6 @@ No `.configure`.
 
 ## I want to learn more!
 
-Visit <a href="Docs.md">this link</a>.
+Visit <a href="master/Docs.md">this link</a>.
 
 <h6>Made with ❤️ using GitHub Copilot</h6>
