@@ -1,5 +1,6 @@
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force
 powershell "iwr -useb get.scoop.sh | iex"
+$env:Path += ";$Home\scoop\shims"
 scoop install git ruby
 cmd /c "git clone https://codeberg.org/brahma/emerald.git $Home\.emerald"
 Write-Output @"

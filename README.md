@@ -1,5 +1,7 @@
 # 🟢 Emerald 🟢 [modules](https://codeberg.org/brahma/emerald-libs-exts)
 
+Note: Emerald has gone through some groundbreaking changes. Please read the documentation if you are a long-term Emerald developer.
+
 This is Emerald. A fast programming language.
 
 ## Installing
@@ -31,3 +33,5 @@ No `.configure`.
 ## I want to learn more!
 
 Visit <a href="https://allcode.brahmasharma.repl.co/root/emerald/blob/master/Docs.md">_this link_</a>.
+
+<h6>Made with ❤️ using GitHub Copilot</h6>
