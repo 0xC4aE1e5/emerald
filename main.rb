@@ -1,4 +1,6 @@
 require 'open-uri'
+
+$functions = {}
 def readprog(codet, varlist)
 	lines = codet.split("\n")
 	lines.each do |line|
@@ -106,7 +108,7 @@ def readprog(codet, varlist)
 			mod = File.read("#{tok[1]}.em")
 			readprog(mod, varlist)
 		elsif tok[0] == "function:"
-			varlist[tok[1]] = tok[2..-1].join(" ").gsub(";", "\n")
+			$functions[tok[1] + ":"] = tok[2..-1].join(" ").gsub(";", "\n")
 		elsif tok[0] == "call:"
 			readprog(varlist[tok[1]], varlist)
 		elsif tok[0] == "list:"
@@ -152,6 +154,10 @@ def readprog(codet, varlist)
 			0
         elsif tok[0] == "getindex:"
             varlist["getindex"] = varlist[tok[1]][tok[2].to_i]
+		elsif $functions.key?(tok[0])
+			readprog($functions[tok[0]], varlist)
+		else
+			puts "Error: #{tok[0]} is not a valid function."
 		end
 	end
 end

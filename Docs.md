@@ -184,9 +184,9 @@ getindex: <list> <index>
 
 To create functions, you do it like this:
 
-    function: print_hworld_on_sep_lines print Hello;print World
+    function: print_hworld_on_sep_lines print: Hello;print: World
     # Run the function
-    call: print_hworld_on_sep_lines
+    print_hworld_on_sep_lines:
 
 You don't have to have a semi-colon; it's only for functions with
 multiple lines.
@@ -208,7 +208,7 @@ module, run this snippet:
 They can also be Ruby extensions, which in-turn can be used to create C extensions. Ruby extensions are used like this:
 
 ```
-rubyext: some_extension.rb a_function arg1 arg2 arg3
+rubyext: some_extension.rb a_function: arg1 arg2 arg3
 ```
 
 Ruby extensions also use `args`. So, `args[0]` would be `a_function`. Built-in functions use `tok`.
