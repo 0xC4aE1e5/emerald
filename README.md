@@ -32,6 +32,6 @@ No `.configure`.
 
 ## I want to learn more!
 
-Visit <a href="https://allcode.brahmasharma.repl.co/root/emerald/blob/master/Docs.md">_this link_</a>.
+Visit <a href="Docs.md">this link</a>.
 
 <h6>Made with ❤️ using GitHub Copilot</h6>
