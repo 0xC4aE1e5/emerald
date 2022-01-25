@@ -170,7 +170,7 @@ rescue
 	puts "Emerald REPL"
 	while true
 		print "λ "
-		code = gets.to_s
+		code = $stdin.gets
 		readprog(code, vars)
 	end
 end
