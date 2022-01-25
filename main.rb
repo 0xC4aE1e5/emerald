@@ -1,4 +1,6 @@
 require 'open-uri'
+require "readline"
+
 
 $functions = {}
 def readprog(codet, varlist)
@@ -161,16 +163,14 @@ def readprog(codet, varlist)
 		end
 	end
 end
-vars = {"junk" => ""}
+$vars = {"junk" => ""}
 begin
 	filename = ARGV[0]
 	code = File.read(filename)
-	readprog(code, vars)
+	readprog(code, $vars)
 rescue
 	puts "Emerald REPL"
-	while true
-		print "λ "
-		code = $stdin.gets
-		readprog(code, vars)
+	while buf = Readline.readline("λ ", true)
+		readprog(buf, $vars)
 	end
 end
